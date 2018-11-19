@@ -9,21 +9,11 @@ import (
 type ServiceInterface interface {
 }
 
-var childServiceContainer = map[string]func() ServiceInterface{
-	"orderService": NewOrderService,
-	"userService": NewUserService,
-}
-
-type Service struct {
-	OrderService *OrderService
-	UserService  *UserService
-}
-
 var service *Service
 
 
 //以上为service容器配置及结构体里必须要添加的childService
-//以下为service容器实现，不用管
+//以下为service容器实现，实例化childService并赋值，不用管
 func GetService() *Service {
 	if service == nil {
 		service = Init()
