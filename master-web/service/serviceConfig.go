@@ -8,7 +8,7 @@ var childServiceContainer = map[string]func() ServiceInterface{
 	"userService": NewUserService,
 }
 
-//配置子service，添加子service的结构体元素时，和上面的容器里的配置对应
+//配置子service，添加子service的结构体元素时，和上面的容器里的初始化函数配置对应
 type Service struct {
 	OrderService *OrderService
 	UserService  *UserService
