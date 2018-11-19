@@ -1,0 +1,18 @@
+2018-10-30 23:22:51.468277 I | etcdmain: etcd Version: 3.3.8
+2018-10-30 23:22:51.468504 I | etcdmain: Git SHA: GitNotFound
+2018-10-30 23:22:51.468532 I | etcdmain: Go Version: go1.10.3
+2018-10-30 23:22:51.468551 I | etcdmain: Go OS/Arch: darwin/amd64
+2018-10-30 23:22:51.468567 I | etcdmain: setting maximum number of CPUs to 4, total number of available CPUs is 4
+2018-10-30 23:22:51.468587 N | etcdmain: failed to detect default host (default host not supported on darwin_amd64)
+2018-10-30 23:22:51.468607 W | etcdmain: no data-dir provided, using default data-dir ./default.etcd
+2018-10-30 23:22:51.468722 N | etcdmain: the server is already initialized as member before, starting as etcd member...
+2018-10-30 23:22:51.470071 C | etcdmain: listen tcp 127.0.0.1:2380: bind: address already in use
+2018-10-30 23:22:58.530585 I | etcdmain: etcd Version: 3.3.8
+2018-10-30 23:22:58.530768 I | etcdmain: Git SHA: GitNotFound
+2018-10-30 23:22:58.530809 I | etcdmain: Go Version: go1.10.3
+2018-10-30 23:22:58.530839 I | etcdmain: Go OS/Arch: darwin/amd64
+2018-10-30 23:22:58.530879 I | etcdmain: setting maximum number of CPUs to 4, total number of available CPUs is 4
+2018-10-30 23:22:58.530917 N | etcdmain: failed to detect default host (default host not supported on darwin_amd64)
+2018-10-30 23:22:58.530951 W | etcdmain: no data-dir provided, using default data-dir ./default.etcd
+2018-10-30 23:22:58.531132 N | etcdmain: the server is already initialized as member before, starting as etcd member...
+2018-10-30 23:22:58.533463 C | etcdmain: listen tcp 127.0.0.1:2380: bind: address already in use
