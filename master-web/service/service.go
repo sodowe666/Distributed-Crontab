@@ -12,8 +12,7 @@ type ServiceInterface interface {
 var service *Service
 
 
-//以上为service容器配置及结构体里必须要添加的childService
-//以下为service容器实现，实例化childService并赋值，不用管
+//以下为service容器实现，实例化serviceConfig.go文件里Service结构体里的元素并赋值，不用管
 func GetService() *Service {
 	if service == nil {
 		service = Init()
@@ -51,7 +50,3 @@ func (service *Service) setChildServiceByReflect() error {
 	}
 	return nil
 }
-
-//func (service *Service)Error() string {
-//	return "SetDao Method must set"
-//}
