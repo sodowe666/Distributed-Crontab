@@ -28,9 +28,6 @@ func main() {
 	s := server.NewServer(*env)
 	//服务初始化，初始化路由
 	s.Bootstrap()
-	//初始化etcd
-	//system.InitEtcd()
-	//初始化redis
 	//服务启动
 	if err := s.Start(); err != nil {
 		panic("server start Error: " + err.Error())

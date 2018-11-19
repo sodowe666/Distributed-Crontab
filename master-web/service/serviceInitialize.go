@@ -13,7 +13,7 @@ var service *Service
 
 
 //以下为service容器实现，实例化serviceConfig.go文件里Service结构体里的元素并赋值，不用管
-func GetService() *Service {
+func GetInstance() *Service {
 	if service == nil {
 		service = Init()
 	}
