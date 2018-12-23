@@ -24,6 +24,7 @@ func NewService() *Service {
 	return &Service{}
 }
 
+//初始化
 func Init() *Service {
 	service := NewService()
 	err := service.setChildServiceByReflect()
@@ -33,6 +34,7 @@ func Init() *Service {
 	return service
 }
 
+//反射解析Service结构体里的元素，并赋值
 func (service *Service) setChildServiceByReflect() error {
 	//反射方式赋值service结构体内容
 	refV := reflect.Indirect(reflect.ValueOf(service))

@@ -11,7 +11,6 @@ import (
 )
 
 func main() {
-
 	//设置线程数
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	//加载日志

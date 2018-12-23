@@ -13,3 +13,14 @@ type Service struct {
 	OrderService *OrderService
 	UserService  *UserService
 }
+
+
+
+//获取order服务方法
+func GetOrderService() *OrderService {
+	return GetInstance().OrderService
+}
+//获取用户服务方法
+func GetUserService() *UserService {
+	return GetInstance().UserService
+}

@@ -30,6 +30,18 @@ db:
     maxOpenConns: 500
     idleTime: 600
     slaves:
+  user:
+    type: mysql
+    database: imooc_shop
+    user: root
+    password: abciou123
+    charset: utf8
+    host: 127.0.0.1
+    port: 3306
+    maxIdleConns: 500
+    maxOpenConns: 500
+    idleTime: 600
+    slaves:
 #redis配置
 redis:
   host: 127.0.0.1

@@ -17,13 +17,13 @@ type Server struct {
 }
 
 //new一个server
-func NewServer(env string,cfgHandlers... handler) ServerInterface {
+func NewServer(env string, cfgHandlers ... handler) ServerInterface {
 	server := new(Server)
 	//设置模式
 	gin.SetMode(env)
 	server.Engine = gin.Default()
 	//执行配置项
-	for _,cfgHandler := range cfgHandlers{
+	for _, cfgHandler := range cfgHandlers {
 		cfgHandler(server)
 	}
 	return server
@@ -51,13 +51,13 @@ func (server *Server) Start() error {
 func (server *Server) run() error {
 	port := viper.Get("server.port")
 	//
-	readTimerout := viper.Get("server.readTimeout").(int)
+	readTimeout := viper.Get("server.readTimeout").(int)
 	writeTimeout := viper.Get("server.writeTimeout").(int)
 	s := &http.Server{
 		Handler:        server,
 		Addr:           fmt.Sprintf(":%s", port),
-		ReadTimeout:    time.Duration(readTimerout),
-		WriteTimeout:    time.Duration(writeTimeout),
+		ReadTimeout:    time.Duration(readTimeout),
+		WriteTimeout:   time.Duration(writeTimeout),
 		MaxHeaderBytes: 1 << 20,
 	}
 	return s.ListenAndServe()

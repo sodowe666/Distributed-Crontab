@@ -2,6 +2,7 @@ package handlers
 
 import "distributedcrontab/master-web/service"
 
-func aaa()  {
+func Index()  {
 	service.GetInstance().UserService.AAA()
+
 }

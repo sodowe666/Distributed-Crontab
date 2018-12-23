@@ -9,6 +9,10 @@ type EtcdStore struct {
 	EtcdClient *clientv3.Client
 }
 
+func GetEtcd()  {
+
+}
+
 var etcdStore *EtcdStore
 
 func InitEtcd(conf map[string]interface{}) {
@@ -26,5 +30,4 @@ func InitEtcd(conf map[string]interface{}) {
 		panic("etcd init fail")
 	}
 	etcdStore.EtcdClient = client
-
 }
